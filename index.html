@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="dark" />
+<title>Parth Sarthi Mishra | Developer Room</title>
+<meta name="description" content="Parth Sarthi Mishra — backend engineer building P2P networking, zero-knowledge anti-spam and local-first sync in Rust, Go and Python. Walk around a 3D developer room, or open the quick view." />
+<meta name="theme-color" content="#11141a" />
+<link rel="canonical" href="https://mrsarthi.github.io/mrsarthi/" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+<!-- link previews (LinkedIn, Slack, X, …) — these URLs must be absolute -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="devroom" />
+<meta property="og:title" content="Parth Sarthi Mishra — Developer Room" />
+<meta property="og:description" content="A 3D room you can walk around: P2P networking, zero-knowledge anti-spam and local-first sync, built in Rust, Go and Python." />
+<meta property="og:url" content="https://mrsarthi.github.io/mrsarthi/" />
+<meta property="og:image" content="https://mrsarthi.github.io/mrsarthi/assets/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="The devroom intro: Parth Sarthi Mishra's name over a low-poly developer room" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+<link rel="modulepreload" href="https://unpkg.com/three@0.160.0/build/three.module.js" crossorigin />
+</head>
+<body class="intro">
+
+  <div id="game" tabindex="-1" aria-label="Developer room"></div>
+
+  <!-- landing: visible immediately, while the room loads behind it -->
+  <section id="intro" class="intro-screen" aria-labelledby="introName">
+    <div class="intro-card">
+      <p class="intro-kicker">devroom · portfolio</p>
+      <h1 id="introName">Parth Sarthi Mishra</h1>
+      <p id="introRole" class="intro-role">Backend engineer, building toward Web3 / protocol-level work</p>
+      <p id="introPitch" class="intro-pitch">I build systems-level things in Rust, Go and Python — P2P networking, zero-knowledge anti-spam, local-first sync, and the protocols underneath them.</p>
+      <div class="intro-actions">
+        <button id="enterRoom" type="button" class="btn primary" data-enter-room disabled>Loading the room…</button>
+        <button type="button" class="btn ghost" data-open="quick">Quick view</button>
+        <a id="introResume" class="btn ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      </div>
+      <p id="introNote" class="intro-note">A small 3D room you can walk around. Sit at the desk to use a real shell; the quick view has everything on one page.</p>
+    </div>
+  </section>
+
+  <div id="controls" class="controls" role="group" aria-label="Controls">
+    <button id="setSeated" type="button" hidden>Sit (E)</button>
+    <button id="setWalk" type="button" hidden>Stand (Esc)</button>
+    <button id="tvPrev" type="button" class="ghost icon" hidden aria-label="Previous screen">‹</button>
+    <button id="tvNext" type="button" class="ghost icon" hidden aria-label="Next screen">›</button>
+    <button id="tvFull" type="button" class="ghost" hidden>Full size</button>
+    <span id="sitHint" class="hint-keys" hidden aria-live="polite"></span>
+    <span class="hint-keys long">WASD walk · drag look · wheel zoom</span>
+    <button type="button" class="ghost" data-open="quick">Quick view</button>
+  </div>
+
+  <div id="stick" class="stick" hidden aria-hidden="true"><div class="stick-knob"></div></div>
+  <div id="tip" class="tip" hidden role="tooltip"></div>
+  <input id="termInput" class="term-input" type="text" autocomplete="off" autocapitalize="off"
+         autocorrect="off" spellcheck="false" enterkeyhint="send" aria-label="Shell input" />
+
+  <div id="quick" class="overlay" role="dialog" aria-modal="true" aria-labelledby="qvTitle" hidden>
+    <div id="quickBody" class="overlay-body"></div>
+  </div>
+
+  <div id="stack" class="overlay" role="dialog" aria-modal="true" aria-labelledby="stTitle" hidden>
+    <div id="stackBody" class="overlay-body"></div>
+  </div>
+
+  <div id="mbmr" class="overlay" role="dialog" aria-modal="true" aria-labelledby="scTitle" hidden>
+    <div id="mbmrBody" class="overlay-body"></div>
+  </div>
+
+  <div id="more" class="overlay" role="dialog" aria-modal="true" aria-labelledby="mwTitle" hidden>
+    <div id="moreBody" class="overlay-body"></div>
+  </div>
+
+  <noscript>
+    <div class="noscript">
+      <h1>Parth Sarthi Mishra</h1>
+      <p>Backend engineer building P2P networking, zero-knowledge anti-spam and local-first sync in Rust, Go and Python.</p>
+      <p>This site needs JavaScript. My work is on <a href="https://github.com/mrsarthi">GitHub</a>, and you can reach me at <a href="mailto:wforsarthi@gmail.com">wforsarthi@gmail.com</a>.</p>
+    </div>
+  </noscript>
+
+  <script type="module" src="js/site.js"></script>
+
+  <!-- Visitor counts (GoatCounter: free, no cookies). To turn on: sign up at
+       goatcounter.com, then replace YOURCODE below and remove the comment
+       markers around the script tag.
+  <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+  -->
+</body>
+</html>
