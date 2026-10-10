@@ -13,9 +13,9 @@
 export const PROFILE = {
   name:    'Parth Sarthi Mishra',
   handle:  'mrsarthi',
-  role:    'P2P systems engineer · distributed systems · Rust',
+  role:    'Backend engineer, building toward Web3',
   place:   '',                       // optional — shown only when set
-  email:   'wforsarthi_biness@outlook.com',
+  email:   'wforsarthi@gmail.com',
   github:  'https://github.com/mrsarthi',
   linkedin:   'https://www.linkedin.com/in/parth-sarthi-mishra-5587b8210/',
   leetcode:   'https://leetcode.com/u/sarth_parthi/',
