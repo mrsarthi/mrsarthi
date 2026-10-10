@@ -57,7 +57,7 @@ export const PROJECTS = [
     tagline: 'A local-first, end-to-end encrypted messenger. No account, and no server holding your history.',
     stack: ['Rust', 'Dicsussion Protocol', 'Iroh / QUIC', 'Windows + Android builds'],
     metrics: [
-      ['Release',   'v0.4.0 beta (Aug 2026)'],
+      ['Release',   'v0.6.1 (Oct 2026)'],
       ['Platforms', 'Windows, Android'],
       ['Identity',  'on-device, 12-word recovery phrase'],
     ],
@@ -131,7 +131,7 @@ export const PROJECTS = [
     tagline: 'A decentralized P2P file-distribution engine, written in Rust from the ground up.',
     stack: ['Rust', 'Tokio', 'Iroh / QUIC', 'BLAKE3 (bao-tree)', 'iroh-gossip'],
     metrics: [
-      ['Release',   'v0.2.0'],
+      ['Release',   'v0.5.2'],
       ['Verified real-world test', '900+ km, cross-NAT'],
       ['Scheduler', 'urgent window, rarest-first, endgame'],
       ['Transfer',  'concurrent multi-peer swarm'],

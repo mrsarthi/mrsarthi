@@ -28,16 +28,21 @@ My portfolio is a [3D room you can walk around](https://mrsarthi.github.io/mrsar
 
 | Project | Proof it's real |
 | --- | --- |
-| [EchoIt](https://mrsarthi.github.io/EchoIt-Messenger/) | v0.4.0 beta, signed Windows + Android [builds](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest) |
+| [EchoIt](https://github.com/mrsarthi/EchoIt-Messenger) | v0.6.1, signed Windows + Android [builds](https://github.com/mrsarthi/EchoIt-Messenger/releases/latest) |
 | [Dicsussion](https://github.com/mrsarthi/DicsussionProtocol) | v0.8.1, 552 Playwright tests, 4 RFCs, [6-party trusted setup](https://github.com/mrsarthi/Ceremonial-Contributions) |
 | [Corroborate](https://github.com/mrsarthi/Corroborate) | in progress |
-| [Chorrent](https://github.com/mrsarthi/Chorrent) | v0.2.0, verified byte-for-byte between two devices 900+ km apart |
+| [Chorrent](https://github.com/mrsarthi/Chorrent) | v0.5.2, verified byte-for-byte between two devices 900+ km apart |
 
 ## Side quests
 
 - [**MBMR**](https://github.com/mrsarthi/MBM_recommender) ([live](https://mbm-recommender-nine.vercel.app/)): mood-based movie picks, trained on my Letterboxd diary
 - [**MACCO**](https://github.com/mrsarthi/MACCO): multi-agent code Q&A where every claim must cite a real line of code
 - [**G.I.D.E.O.N**](https://github.com/mrsarthi/G.I.D.E.O.N): a local-first AI assistant with a 3D hologram
+
+## Open source
+
+- [**sendme**](https://github.com/n0-computer/sendme) (n0-computer): merged [#147](https://github.com/n0-computer/sendme/pull/147), so `sendme --help` now points to each subcommand's options (closes [#122](https://github.com/n0-computer/sendme/issues/122)). Also spotted that [#47](https://github.com/n0-computer/sendme/issues/47), open for two years, was already fixed, and got it closed.
+- [**iroh-blobs**](https://github.com/n0-computer/iroh-blobs) (n0-computer): [#285](https://github.com/n0-computer/iroh-blobs/pull/285), use `max_write_duration` for write batches (in review)
 - [**CodeFit**](https://github.com/wforShubham/CodeFit/pulls?q=is%3Apr+author%3Amrsarthi): 6 merged PRs, including Judge0 code execution over WebSockets
 
 ---
